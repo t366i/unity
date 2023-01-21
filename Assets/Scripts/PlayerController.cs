@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
 
-        ManagerTest.Input.KeyAction -= OnKeyBoard;
-        ManagerTest.Input.KeyAction += OnKeyBoard;
+        Managers.Input.KeyAction -= OnKeyBoard;
+        Managers.Input.KeyAction += OnKeyBoard;
 
         //ManagerTest.Input.KeyAction += OnKeyBoard(); 이거 붙이면 안됨 ㅋ.ㅋ
 
