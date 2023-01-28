@@ -55,9 +55,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void UpdateMoving()
+    {
+
+    }
+   
+    void OnMouseClicked()
+    {
+
+    }
     
     void Update()
     {
+        // state
+
         // Get Key down = 한번씩
         // Get Key = 계속 
 
