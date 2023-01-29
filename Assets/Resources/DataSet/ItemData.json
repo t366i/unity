@@ -1,0 +1,17 @@
+{
+  "ItemList": 
+  [
+    {
+      "ItemName": "Sword1",
+      "Damage": "10"
+    },
+    {
+      "ItemName": "Sword2",
+      "Damage": "20"
+    },
+    {
+      "ItemName": "Sword3",
+      "Damage": "30"
+    }
+  ]
+}
