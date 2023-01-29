@@ -12,7 +12,7 @@ public class WriteInventory : MonoBehaviour
 }
 
 [Serializable]
-public class InventoryManager 
+public class InventoryManager : BaseManager
 {
     public ItemData Hand = new ItemData();
     public List<ItemData> Having = new List<ItemData>();
@@ -44,5 +44,12 @@ public class InventoryManager
         return true;
     }
 
+    public override void Init()
+    {
+        LoadInventory();
+    }
 
+    public override void Clear()
+    {
+    }
 }

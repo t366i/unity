@@ -7,8 +7,8 @@ public class Managers : MonoBehaviour
     private DataManager s_DataManager = new DataManager();
     private InventoryManager s_inventory = new InventoryManager();
 
-    public DataManager DataManager { get { return s_DataManager; } }
-    public InventoryManager Inventory { get { return s_inventory; } }
+    public DataManager DataManager { get { return Instance.s_DataManager; } }
+    public InventoryManager Inventory { get { return Instance.s_inventory; } }
 
 
     public static Managers Instance { get { Init(); return s_instance; } } // 유일한 매니저를 갖고온다
@@ -17,7 +17,7 @@ public class Managers : MonoBehaviour
     {
         Init();
         DataManager.Init();
-        Inventory.LoadInventory();
+        Inventory.Init();
     }
 
     static void Init()
