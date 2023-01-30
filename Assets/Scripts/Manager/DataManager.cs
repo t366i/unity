@@ -35,7 +35,6 @@ public class DataManager : BaseManager
     public void DataWrite(string fileName, UnityEngine.Object obj)
     {
         string text = JsonUtility.ToJson(obj);
-        Debug.Log("Wrtie : " + text);
         File.WriteAllText( Application.persistentDataPath + "/" + fileName + ".json" ,text);
     }
     // https://geukggom.tistory.com/9  
@@ -45,7 +44,6 @@ public class DataManager : BaseManager
         if (File.Exists(path))
         {
             string text = File.ReadAllText(path);
-            Debug.Log("Read : " + text);
             return JsonUtility.FromJson<T>(text);
         }
         return default;
