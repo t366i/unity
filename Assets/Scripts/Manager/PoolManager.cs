@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PoolManager : BaseManager
 {
+
+    #region Pool
     public class Pool
     {
         GameObject Root;
@@ -62,6 +64,7 @@ public class PoolManager : BaseManager
                 PushNew(count - Count);
         }
     }
+    #endregion
 
     private Dictionary<string, Pool> pools = new Dictionary<string, Pool>();
 

@@ -195,7 +195,7 @@ public class Spwan : MonoBehaviour
         CoroutineTeleport = StartCoroutine(Teleport());
     }
 
-    void OnApplicationQuit()
+    void OnDestroy()
     {
         if(CoroutineCheckRect != null)
         {

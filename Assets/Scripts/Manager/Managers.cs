@@ -36,7 +36,7 @@ public class Managers : MonoBehaviour
             DontDestroyOnLoad(go);
             s_instance = go.GetComponent<Managers>();
 
-            // Start에 Init을 넣으니까 다른 컴포넌트가 먼저 GameManager를 호출 시 다른 매니저 사용에 에러가 발생함.
+            // Start에 Init을 넣으니까 다른 컴포넌트가 GameManager보다 먼저 호출 시 다른 매니저 사용에 에러가 발생함.
             Instance.DataManager.Init();
             Instance.Inventory.Init();
             Instance.PoolManager.Init();

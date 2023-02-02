@@ -56,10 +56,13 @@ public class GameStage : MonoBehaviour
         CoroutineDefaultSpawn = StartCoroutine(DefaultSpawn());
     }
 
-    void OnApplicationQuit()
+    void OnDestroy()
     {
         if (CoroutineDefaultSpawn != null)
+        {
             StopCoroutine(CoroutineDefaultSpawn);
+            CoroutineDefaultSpawn = null;
+        }
     }
 
 
