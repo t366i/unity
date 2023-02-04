@@ -4,9 +4,24 @@ using UnityEngine;
 
 public abstract class State : MonoBehaviour
 {
-    private float _HP = 0;
+    private float _MaxHP = 1;
+    private float _HP = 1;
     private float _MoveSpeed = 0;
 
+    public float MaxHP
+    {
+        get
+        {
+            return _MaxHP;
+        }
+        protected set
+        {
+            if (value <= 1)
+                _MaxHP = 1;
+            else
+                _MaxHP = value;
+        }
+    }
     public float HP {
         get
         {
@@ -16,6 +31,8 @@ public abstract class State : MonoBehaviour
         {
             if (value <= 0)
                 _HP = 0;
+            else if (_HP + value >= _MaxHP)
+                _HP = MaxHP;
             else
                 _HP = value;
         }
