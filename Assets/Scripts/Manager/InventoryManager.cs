@@ -17,7 +17,6 @@ public class InventoryManager : BaseManager
     public ItemData Hand = new ItemData();
     public List<ItemData> Having = new List<ItemData>();
     public int Coin = 0;
-    //public Inventory_s inventory { get; private set; } = new Inventory_s();
 
     public void SaveInventory()
     {
